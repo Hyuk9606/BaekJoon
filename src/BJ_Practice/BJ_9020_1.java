@@ -47,7 +47,7 @@ public class BJ_9020_1 {
 						p++;
 					else if (list.get(p) + list.get(q) > N)
 						q--;
-				}
+				} 
 				System.out.println(list.get(i) + " " + list.get(j));
 			}
 
