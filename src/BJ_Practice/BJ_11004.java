@@ -3,7 +3,7 @@ package BJ_Practice;
 import java.io.*;
 import java.util.*;
 
-public class BJ_5800 {
+public class BJ_11004 {
 	public static void quickSort(int[] arr) {
 		quickSort(arr, 0, arr.length - 1);
 	}
@@ -43,15 +43,20 @@ public class BJ_5800 {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 		try {
-			int[] score = new int[20];
-			for (int j = 0; j < 20; j++) {
-				score[j] = Integer.parseInt(br.readLine());
-			}
-			quickSort(score, 0, 9);
-			quickSort(score, 10, 19);
-			System.out.print(score[9] + score[8] + score[7]);
-			System.out.print(score[19] + score[18] + score[17]);
-
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int N = Integer.parseInt(st.nextToken());
+			int K = Integer.parseInt(st.nextToken());
+			st = new StringTokenizer(br.readLine());
+			
+			int[] A = new int[N];
+			for(int i=0; i<N; i++)
+				A[i] = Integer.parseInt(st.nextToken());
+			quickSort(A);
+			bw.write(Integer.valueOf(A[K-1])+" ");
+			bw.flush();
+			bw.close();
+			br.close();
+		
 		} catch (Exception e) {
 		}
 	}
