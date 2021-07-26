@@ -12,12 +12,12 @@ public class X_BJ_2751 {
 			int[] cnt = new int[2000001];
 
 			for (int i = 0; i < N; i++)
-				cnt[Integer.parseInt(br.readLine())+1000000]++;
+				cnt[Integer.parseInt(br.readLine()) + 1000000]++;
 
 			for (int i = 0; i < 2000001; i++) {
-				for (int j = 0; j < cnt[i]; j++) {
-					bw.write(Integer.valueOf(i-1000000) + "\n");
-				}
+				if (cnt[i] != 0)
+					bw.write(Integer.valueOf(i - 1000000) + "\n");
+
 				bw.flush();
 
 			}

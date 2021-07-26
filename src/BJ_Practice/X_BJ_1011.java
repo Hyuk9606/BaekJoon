@@ -11,8 +11,6 @@ public class X_BJ_1011 {
 		else {
 			return calc(num-A*A)-1;
 		}
-		
-		
 	}
 
 	public static void main(String[] args) {
