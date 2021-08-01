@@ -11,7 +11,7 @@ public class BJ_10825 {
 	private static Student[] students;
 
 	public static void main(String[] args) {
-	//	scanner = new Scanner(src);
+		scanner = new Scanner(src);
 		N = scanner.nextInt();
 		students = new Student[N];
 		for (int n = 0; n < N; n++) {
@@ -41,7 +41,7 @@ public class BJ_10825 {
 
 		for (Student s : students) {
 			// System.out.println(s.name);
-			builder.append(s.name).append("\n");
+			builder.append(s.name+"\n");
 		}
 		System.out.println(builder);
 
