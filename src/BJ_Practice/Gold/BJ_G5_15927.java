@@ -1,8 +1,8 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.*;
 
-public class BJ_15927 {
+public class BJ_G5_15927 {
 
 	static char[] c;
 	static int max = 0;
