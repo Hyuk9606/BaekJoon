@@ -28,23 +28,18 @@ public class SWEA_D2_1954 {
 				int nc = c + deltas[i][1];
 				if (!isIn(nr, nc) || snale[nr][nc] != 0) {
 					i = (i + 1) % 4;
-
-					r = r + deltas[i][0];
-					c = c + deltas[i][1];
-				} else {
-					r = r + deltas[i][0];
-					c = c + deltas[i][1];
 				}
-
+				r = r + deltas[i][0];
+				c = c + deltas[i][1];
 			}
-			System.out.println("#"+t);
+			System.out.println("#" + t);
 			for (int[] x : snale) {
-				for(int x2 : x) {
-					System.out.print(x2+" ");
+				for (int x2 : x) {
+					System.out.print(x2 + " ");
 				}
 				System.out.println();
 			}
-				
+
 		}
 	}
 }
