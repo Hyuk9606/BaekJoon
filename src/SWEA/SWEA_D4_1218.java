@@ -43,7 +43,7 @@ public class SWEA_D4_1218 {
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
-		for (int t = 1; t <= 10; t++) {
+		for (int t = 1; t <= 1; t++) {
 			N = Integer.parseInt(br.readLine());
 			Answer = 0;
 			input = new char[N];
@@ -73,7 +73,7 @@ public class SWEA_D4_1218 {
 
 					}
 				}
-				Answer = 1;
+				if(st1.empty())	Answer = 1;
 			}
 			sb.append("#").append(t).append(" ").append(Answer).append("\n");
 		}
