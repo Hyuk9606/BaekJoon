@@ -1,4 +1,4 @@
-package Bronze;
+package BJ_Practice.Bronze;
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
-package BJ_Practice;
+package BJ_Practice.Fail;
 
-public class X_BJ_1011 {
+public class BJ_1011 {
 	static int step = 0;
 
 	public static int calc(int num) {

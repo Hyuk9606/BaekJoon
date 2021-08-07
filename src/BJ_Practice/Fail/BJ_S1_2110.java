@@ -1,9 +1,9 @@
-package BJ_Practice;
+package BJ_Practice.Fail;
 
 import java.io.*;
 import java.util.*;
 
-public class X_BJ_S1_2110 {
+public class BJ_S1_2110 {
 	public static int N;
 	public static int C;
 

@@ -1,9 +1,9 @@
-package BJ_Practice;
+package BJ_Practice.Fail;
 
 import java.io.*;
 import java.util.*;
 
-public class X_BJ_1715 {
+public class BJ_1715 {
 	public static int sum = 0;
 
 	public static int[] cardSum(int[] arr) {

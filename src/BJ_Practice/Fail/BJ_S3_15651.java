@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Fail;
 
 import java.util.*;
 
