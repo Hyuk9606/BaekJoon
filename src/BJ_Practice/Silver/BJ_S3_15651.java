@@ -10,7 +10,7 @@ public class BJ_S3_15651 {
 	static StringBuilder sb = new StringBuilder();
 	static void Combination(int cnt) {
 		if(cnt == M) {
-			for(int i= 0; i<M; i++) {
+			for(int i= st; i<M; i++) {
 			sb.append(select[i]).append(" ");	
 			}
 			sb.append("\n");
