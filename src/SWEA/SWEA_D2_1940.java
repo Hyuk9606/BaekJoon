@@ -1,13 +1,16 @@
 package SWEA;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class SWEA_D2_1940 {
 	static int T, N,cur,x;
 	static StringBuilder sb = new StringBuilder();
 	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
@@ -28,9 +31,11 @@ public class SWEA_D2_1940 {
 				}
 				if(cur < 0) cur =0;
 			}
-			sb.append("#").append(t).append(" ").append(cur).append("\n");
+			bw.write("#" + t + " " + cur+ "\n");
 		}
+		bw.flush();
 		br.close();
+		bw.close();
 		System.out.println(sb);
 	}
 }
