@@ -12,26 +12,20 @@ public class X_SWEA_D3_5215 {
 	static List<int[]> ingredient = new ArrayList<>();
 	static List<int[]> pick = new ArrayList<>();
 
-	private static void Combination(int cnt) {
+	private static void powerSet(int cnt, int sat, int cal) {
+		if (cal >= L)
+			return;
 		if (cnt == N) {
-			for (int i = 0; i < N; i++) {
-				if (isSelected[i] == true) {
-					cur[0] += (ingredient.get(i))[0];
-					cur[1] += (ingredient.get(i))[1];
-					if (cur[1] <= L && cur[0] > max) {
-						max = cur[0];
-					}
-				}
-			}
-			cur =new int[] {0,0};
-
+			max = Math.max(max, sat);
+			System.out.println(sat);
 			return;
 		}
 
+
 		isSelected[cnt] = true;
-		Combination(cnt + 1);
+		powerSet(cnt - 1, sat + (ingredient.get(cnt))[0], cal + (ingredient.get(cnt))[1]);
 		isSelected[cnt] = false;
-		Combination(cnt + 1);
+		powerSet(cnt - 1, sat, cal);
 
 	};
 
@@ -52,15 +46,13 @@ public class X_SWEA_D3_5215 {
 					element[1] = Integer.parseInt(st.nextToken());
 					ingredient.add(element);
 				}
-
-				isSelected = new boolean[N];
-				Combination(0);
-
+				
+				powerSet(N, 0, 0);
 				System.out.println("#" + t + " " + max);
 
 			}
 
-		} catch (Exception e) {
+		} catch (IOException e) {
 			// TODO: handle exception
 		}
 	}
