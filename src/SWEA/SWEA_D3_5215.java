@@ -1,6 +1,5 @@
 package SWEA;
 
-
 import java.io.*;
 import java.util.*;
 
@@ -12,6 +11,47 @@ public class SWEA_D3_5215 {
 
 	static List<int[]> ingredient = new ArrayList<>();
 	static List<int[]> pick = new ArrayList<>();
+
+	static class XY implements Comparable<XY> {
+		int x;
+		int y;
+
+		public XY(int x, int y) {
+			super();
+			this.x = x;
+			this.y = y;
+		}
+
+		@Override
+		public String toString() {
+			return "XY [x=" + x + ", y=" + y + "]";
+		}
+
+		public int getX() {
+			return x;
+		}
+
+		public void setX(int x) {
+			this.x = x;
+		}
+
+		public int getY() {
+			return y;
+		}
+
+		public void setY(int y) {
+			this.y = y;
+		}
+
+		@Override
+		public int compareTo(XY o) {
+			if (this.x > o.x)
+				return 1;
+			else
+				return -1;
+		}
+
+	}
 
 	private static void Combination(int cnt) {
 		if (cnt == K) {
@@ -57,6 +97,11 @@ public class SWEA_D3_5215 {
 //					System.out.print(x[0] + " " + x[1]);
 //					System.out.println();
 //				}
+				List<Integer> list = new LinkedList<>();
+				XY[] xy = new XY[3];
+				Collections.sort(xy, (xy1,xy2) ->  {
+					if(
+				});
 
 			}
 
