@@ -100,7 +100,7 @@ public class SWEA_D3_5215 {
 				List<Integer> list = new LinkedList<>();
 				XY[] xy = new XY[3];
 				Collections.sort(xy, (xy1,xy2) ->  {
-					if(   
+					if(       
 				});
 
 			}
