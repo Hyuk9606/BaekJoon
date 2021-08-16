@@ -1,8 +1,8 @@
-package BJ_Practice;
+package BJ_Practice.Silver;
 
 import java.util.*;
 
-public class BJ_S3_10973 {
+public class BJ_S3_10972 {
 	public static int[] np(int[] numbers) {
 		int N = numbers.length;
 		int i = N - 1;

@@ -1,9 +1,9 @@
-package BJ_Practice;
+package BJ_Practice.Silver;
 
 import java.io.*;
 import java.util.*;
 
-public class BJ_15652 {
+public class BJ_S3_15652 {
 	static int N;
 	static int M;
 	static int[] select;
