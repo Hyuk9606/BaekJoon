@@ -72,7 +72,9 @@ public class BJ_S1_1074 {
 			visit(r,c,1);
 			System.out.println(cnt-1);
 		}
-		else System.out.println(cnt);
+		 System.out.println(cnt);
+		 
+		 
 //		System.out.println(r + " " + c);
 //		sb.append(cnt - 1);
 //		System.out.println(sb);
