@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Silver;
 
 import java.io.*;
 import java.util.*;
