@@ -33,7 +33,7 @@ public class BJ_G5_9663 {
 //		map = new char[N][N];
 		XY[] selected = new XY[N];
 		count = 0;
-		comb(0,0,0,selected);
+//		comb(0,0,0,selected);
 		System.out.println(count);
 	}
 
