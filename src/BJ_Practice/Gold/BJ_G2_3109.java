@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.*;
 import java.util.*;
@@ -60,7 +60,7 @@ public class BJ_G2_3109 {
 		}
 		return map;
 	}
-
+	
 	static boolean isIn(int r, int c) {
 		return r >= 0 && r < R && c >= 0 && c < C;
 	}
