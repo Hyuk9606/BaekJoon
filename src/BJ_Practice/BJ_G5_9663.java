@@ -4,39 +4,39 @@ import java.io.*;
 import java.util.*;
 
 public class BJ_G5_9663 {
-	static int N;
-	static char[][] map;
-	static int count;
-	static int k = 0;
+	static int N, cnt;
+	static int col[];
 
-	static class XY {
-		int x;
-		int y;
+	static void setQueen(int rowNo) {
+//		if(!isAvailable(rowNo-1)) return;
 
-		public XY(int x, int y) {
-			super();
-			this.x = x;
-			this.y = y;
+		if (rowNo == N) {
+			cnt++;
+			return;
 		}
 
-		@Override
-		public String toString() {
-			return "[x=" + x + ", y=" + y + "]";
+		for (int i = 0; i < N; i++) {
+			col[rowNo] = i;
+			if (isAvailable(rowNo)) {
+				setQueen(rowNo + 1);
+			}
 		}
-		
-		
+	}
+
+	static boolean isAvailable(int rowNo) {
+		for (int i = 0; i < rowNo; i++) {
+			if (col[rowNo] == col[i] || Math.abs(col[rowNo] - col[i]) == rowNo - i)
+				return false;
+		}
+		return true;
 	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.parseInt(br.readLine());
-//		map = new char[N][N];
-		XY[] selected = new XY[N];
-		count = 0;
-//		comb(0,0,0,selected);
-		System.out.println(count);
+		col = new int[N];
+		setQueen(0);
+		System.out.println(cnt);
 	}
-
-	
 
 }
