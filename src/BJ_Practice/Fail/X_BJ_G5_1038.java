@@ -1,8 +1,8 @@
-package BJ_Practice;
+package BJ_Practice.Fail;
 
 import java.io.*;
 
-public class BJ_G5_1038 {
+public class X_BJ_G5_1038 {
 
 	static int N;
 
