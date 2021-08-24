@@ -19,6 +19,7 @@ public class BJ_S1_2447 {
 			 }
 		 }
 	}
+	
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -28,6 +29,7 @@ public class BJ_S1_2447 {
 				star(i, j, N);
 			sb.append("\n");
 		}
+		
 		System.out.println(sb);
 
 	}
