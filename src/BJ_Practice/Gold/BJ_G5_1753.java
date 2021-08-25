@@ -1,9 +1,9 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.*;
 import java.util.*;
 
-public class X_BJ_G5_1753 {
+public class BJ_G5_1753 {
 	static int V, E, K;
 	static StringTokenizer st;
 
@@ -45,7 +45,7 @@ public class X_BJ_G5_1753 {
 			int c = Integer.parseInt(st.nextToken());
 			int weight = Integer.parseInt(st.nextToken());
 			adjArray[r] = new Node(c, weight, adjArray[r]);
-			adjArray[c] = new Node(r, weight, adjArray[c]);
+
 		}
 
 		int[] distance = new int[V + 1];
@@ -63,21 +63,22 @@ public class X_BJ_G5_1753 {
 				}
 			}
 			visited[current] = true;
-			System.out.print(current + " ");
-			if (current == end)
-				break;
 
-			for (Node temp = adjArray[current]; temp.link != null; temp = temp.link)
+//			if (current == end)
+//				break;
+
+			for (Node temp = adjArray[current]; temp != null; temp = temp.link)
 				if (!visited[temp.vertex] && distance[temp.vertex] > min + temp.weight) {
 					distance[temp.vertex] = min + temp.weight;
 				}
 		}
-		System.out.println();
+
 		for (int i = 1; i <= V; i++) {
 			if (distance[i] == INFINITY)
 				System.out.println("INF");
 			else
 				System.out.println(distance[i]);
 		}
+
 	}
 }

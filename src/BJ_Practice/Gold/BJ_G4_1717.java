@@ -56,7 +56,7 @@ public class BJ_G4_1717 {
 					else sb.append("NO\n");
 					break;
 				}
-				
+
 			}
 		System.out.println(sb);
 
