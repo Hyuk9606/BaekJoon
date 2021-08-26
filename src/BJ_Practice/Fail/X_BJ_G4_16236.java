@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Fail;
 
 import java.io.*;
 import java.util.*;
@@ -60,6 +60,7 @@ public class X_BJ_G4_16236 {
 					queue.offer(new Fish(shark.x, shark.y));
 					int[][] route = new int[N][N];
 					while (!queue.isEmpty()) {
+						
 						Fish f = queue.poll();
 						int r = f.x;
 						int c = f.y;
@@ -67,7 +68,7 @@ public class X_BJ_G4_16236 {
 						for (int k = 0; k < 4; k++) {
 							int nr = r + deltas[k][0];
 							int nc = c + deltas[k][1];
-							if (isIn(nr, nc) && map[nr][nc] <= shark.size) {
+							if(isIn(nr, nc) && map[nr][nc] <= shark.size) {
 								queue.offer(new Fish(nr, nc));
 								route[nr][nc] = route[r][c] + 1;
 								if (shark.size > map[nr][nc] && map[nr][nc] > 0) {
