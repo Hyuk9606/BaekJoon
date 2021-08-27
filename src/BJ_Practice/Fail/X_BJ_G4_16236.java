@@ -54,49 +54,73 @@ public class X_BJ_G4_16236 {
 			}
 		}
 		int ans = 0;
+
 		outer: for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
+				int ansR = Integer.MAX_VALUE, ansC = Integer.MAX_VALUE;
+				int[][] route = new int[N][N];
 				if (shark.size > map[i][j] && map[i][j] > 0) {
 					queue.offer(new Fish(shark.x, shark.y));
-					int[][] route = new int[N][N];
+					route[shark.x][shark.y] = 0;
+					int cnt = 1;
 					while (!queue.isEmpty()) {
-						
+						int size = queue.size();
 						Fish f = queue.poll();
-						int r = f.x;
-						int c = f.y;
+						
+						while(size-- >= 0) {
+							int r = f.x;
+							int c = f.y;
 
-						for (int k = 0; k < 4; k++) {
-							int nr = r + deltas[k][0];
-							int nc = c + deltas[k][1];
-							if(isIn(nr, nc) && map[nr][nc] <= shark.size) {
-								queue.offer(new Fish(nr, nc));
-								route[nr][nc] = route[r][c] + 1;
-								if (shark.size > map[nr][nc] && map[nr][nc] > 0) {
-									ans += route[nr][nc];
-									map[shark.x][shark.y] = 0;
-									map[nr][nc] = 9;
-
-									shark = new Shark(nr, nc, shark.size, shark.eat + 1);
-									if (shark.eat == shark.size) {
-										shark.size++;
-										shark.eat = 0;
+							for (int k = 0; k < 4; k++) {
+								int nr = r + deltas[k][0];
+								int nc = c + deltas[k][1];
+								if (isIn(nr, nc) && map[nr][nc] <= shark.size && route[nr][nc]==0) {
+									queue.offer(new Fish(nr, nc));
+									route[nr][nc]= route[r][c]+1;
+									if (shark.size > map[nr][nc] && map[nr][nc] > 0) {
+										if (ansR > nr) {
+											ansR = nr;
+											ansC = nc;
+										}
+										else if(ansR == nr) {
+											if(ansC>nc) {
+												ansR = nr;
+												ansC = nc;
+											}
+										}
 									}
-
-									queue.clear();
-									i = -1;
-									continue outer;
 								}
 							}
 						}
+						cnt++;
+						if (ansR == Integer.MAX_VALUE)
+							continue;
+
+						if (shark.size > map[ansR][ansC] && map[ansR][ansC] > 0) {
+							ans += route[ansR][ansC];
+							map[shark.x][shark.y] = 0;
+							map[ansR][ansC] = 9;
+
+							shark = new Shark(ansR, ansC, shark.size, shark.eat + 1);
+							if (shark.eat == shark.size) {
+								shark.size++;
+								shark.eat = 0;
+							}
+							i = -1;
+							queue.clear();
+							continue outer;
+						}
+
 					}
 				}
 			}
+
 		}
 		System.out.println(ans);
+
 	}
 
 	static boolean isIn(int r, int c) {
 		return r >= 0 && r < N && c >= 0 && c < N;
 	}
 }
-
