@@ -27,5 +27,6 @@ public class BJ_B1_13300 {
 					cnt++;
 			}
 		System.out.println(cnt);
+		
 	}
 }
