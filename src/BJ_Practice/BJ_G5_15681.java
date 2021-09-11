@@ -7,6 +7,9 @@ public class BJ_G5_15681 {
 
 	static int N, R, Q;
 	static StringTokenizer st;
+	static Stack<Integer> stack = new Stack<>();
+	static List<Integer>[] arr;
+	static int count[];
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -17,7 +20,7 @@ public class BJ_G5_15681 {
 		R = Integer.parseInt(st.nextToken());
 		Q = Integer.parseInt(st.nextToken());
 
-		List<Integer>[] arr = new ArrayList[N + 1];
+		arr = new ArrayList[N + 1];
 		for (int i = 1; i <= N; i++) {
 			arr[i] = new ArrayList<Integer>();
 		}
@@ -29,10 +32,22 @@ public class BJ_G5_15681 {
 			arr[V].add(U);
 		}
 
-
-		int count[] = new int[N+1];
-		
-	
+		count = new int[N + 1];
+		dfs(R);
+		System.out.println(Arrays.toString(count));
 	}
-	
+
+	static void dfs(int node) {
+		stack.push(node);
+		count[node] = 1;
+		int cnt = 0;
+		for (int i = 0; i < arr[node].size(); i++) {
+			if (count[node] == 0) {
+				dfs(arr[node].get(i));
+				cnt++;
+			}
+		}
+		count[node] = cnt;
+	}
+
 }
