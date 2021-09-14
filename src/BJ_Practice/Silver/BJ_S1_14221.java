@@ -100,10 +100,8 @@ public class BJ_S1_14221 {
 				} else if (minDist == distance[cur]) {
 					answer = Math.min(cur, answer);
 				}
-
 			}
 //			System.out.println(Arrays.toString(distance));
-
 		}
 		System.out.println(answer);
 	}

@@ -40,7 +40,7 @@ public class BJ_G4_14938 {
 		for (int i = 1; i <= N; i++) {
 			item[i] = Integer.parseInt(st.nextToken());
 		}
-		boolean[] isGetted = new boolean[N + 1];
+//		boolean[] isGetted = new boolean[N + 1];
 		Node[] adjArray = new Node[N + 1];
 
 		for (int i = 0; i < R; i++) {
@@ -54,7 +54,7 @@ public class BJ_G4_14938 {
 		}
 
 		int current = 1;
-		int minDist = INFINITY;
+//		int minDist = INFINITY;
 		int answer = 0;
 		for (int step = 1; step <= N; step++) {
 			current = step;
@@ -78,7 +78,7 @@ public class BJ_G4_14938 {
 						distance[temp.vertex] = min + temp.weight;
 				}
 			}
-//			System.out.println(Arrays.toString(distance));
+			System.out.println(Arrays.toString(distance));
 			int sum=0;
 			for (int i = 1; i <= N ; i++) {
 				if(distance[i] >-1 && distance[i] < INFINITY)
