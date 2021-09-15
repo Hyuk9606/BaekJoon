@@ -39,7 +39,7 @@ public class BJ_S2_18352 {
 		step = Integer.parseInt(st.nextToken());
 		visited = new int[N+1];
 		Node[] adjArray = new Node[N + 1];
-
+		
 		for (int i = 0; i < M; i++) {
 			st = new StringTokenizer(br.readLine());
 			int s = Integer.parseInt(st.nextToken());
