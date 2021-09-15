@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.*;
 import java.util.*;
@@ -32,18 +32,22 @@ public class BJ_G5_2636 {
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine());
 			for (int j = 0; j < M; j++) {
-				if(Integer.parseInt(st.nextToken())==1)
+				if (Integer.parseInt(st.nextToken()) == 1)
 					data[i][j] = true;
-				
+
 			}
 		}
-		
+
 		int answer = 0;
-		int step;
+
 		int count = 0;
-		while((step = bfs())!= 0) {
-			answer = step;
-			count++;
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
+				if(data[i][j] == true) {
+					answer = bfs();
+					count++;
+				}
+			}
 		}
 		System.out.println(count);
 		System.out.println(answer);
@@ -54,22 +58,22 @@ public class BJ_G5_2636 {
 		int count = 0;
 		Queue<RC> queue = new LinkedList<>();
 		queue.offer(new RC(0, 0));
+		visited[0][0] = true;
 		while (!queue.isEmpty()) {
 			RC curr = queue.poll();
 			int r = curr.r;
 			int c = curr.c;
-			visited[r][c] = true;
 			for (int i = 0; i < deltas.length; i++) {
 				int nr = r + deltas[i][0];
 				int nc = c + deltas[i][1];
 				if (isIn(nr, nc) && !visited[nr][nc]) {
 					if (data[nr][nc] == true) {
 						data[nr][nc] = false;
-						visited[nr][nc] = true;
 						count++;
 					} else {
 						queue.offer(new RC(nr, nc));
 					}
+					visited[nr][nc] = true;
 				}
 			}
 		}

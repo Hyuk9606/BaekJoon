@@ -3,7 +3,7 @@ package BJ_Practice;
 import java.io.*;
 import java.util.*;
 
-public class BJ_G4_1600 {
+public class X_BJ_G4_1600 {
 	static int K, W, H;
 	static int[][] map;
 	static StringTokenizer st;

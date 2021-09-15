@@ -3,7 +3,7 @@ package SWEA;
 import java.io.*;
 import java.util.*;
 
-public class SEWA_D4_7465 {
+public class SWEA_D4_7465 {
 	static int N;
 	static int M;
 	static int[] p;
