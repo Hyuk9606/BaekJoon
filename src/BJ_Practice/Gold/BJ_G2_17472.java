@@ -1,9 +1,9 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.*;
 import java.util.*;
 
-public class X_BJ_G2_17472 {
+public class BJ_G2_17472 {
 	static int N, M, count;
 	static int[][] map;
 	static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
@@ -77,7 +77,7 @@ public class X_BJ_G2_17472 {
 //		}
 //		
 		int[] minEdge = new int[count + 1];
-		Arrays.fill(minEdge, 987654321);
+		Arrays.fill(minEdge, 20000);
 		boolean[] visited = new boolean[count + 1];
 
 		int result = 0; // 최소신장트리 비용
@@ -98,7 +98,7 @@ public class X_BJ_G2_17472 {
 			result += min;
 
 			// 2. 선택된 정점 기준으로 신장트리에 연결되지 않은 타 정점과의 간선 비용 최소로 업데이트
-			for (int j = 0; j <= count; j++) {
+			for (int j = 1; j <= count; j++) {
 				if (!visited[j] && adjMatrix[minVertex][j] != 0 && minEdge[j] > adjMatrix[minVertex][j]) {
 					minEdge[j] = adjMatrix[minVertex][j];
 				}
@@ -120,8 +120,10 @@ public class X_BJ_G2_17472 {
 		else System.out.println(-1);
 
 	}
-
-	static int classifyIsland() {
+	
+	// 섬 구분하기
+	
+	static int classifyIsland() {	
 		int count = 1;
 		boolean visited[][] = new boolean[N][M];
 		Queue<RC> queue = new LinkedList<>();
@@ -149,11 +151,13 @@ public class X_BJ_G2_17472 {
 		}
 		return count - 1;
 	}
-
-	static int[][] checkConnected() {
+	
+	// 다리가 연결되어 있다면 인접행렬 만들기.
+	
+	static int[][] checkConnected() {	
 		int adjMatrix[][] = new int[count + 1][count + 1];
 		for (int i = 0; i < count + 1; i++) {
-			Arrays.fill(adjMatrix[i], 987654321);
+			Arrays.fill(adjMatrix[i], 20000);
 		}
 		for (int r = 0; r < N; r++) {
 			int start = 0, end = 0, count = 0;
@@ -172,7 +176,7 @@ public class X_BJ_G2_17472 {
 					start = end;
 					end = 0;
 					count = 0;
-				} else if (start != 0) {
+				} else if (start != 0 && map[r][c] != start) {
 					count++;
 				}
 
@@ -204,6 +208,8 @@ public class X_BJ_G2_17472 {
 		return adjMatrix;
 
 	}
+	
+	
 
 	static boolean isIn(int r, int c) {
 		return r >= 0 && r < N && c >= 0 && c < M;
