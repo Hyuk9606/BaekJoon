@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.*;
 import java.util.*;
@@ -26,5 +26,5 @@ public class X_BJ_G4_1600 {
 
 	}
 	
-	static 
+	
 }
