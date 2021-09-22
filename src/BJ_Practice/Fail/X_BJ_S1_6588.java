@@ -3,7 +3,7 @@ package BJ_Practice.Fail;
 import java.io.*;
 import java.util.*;
 
-public class BJ_6588 {
+public class X_BJ_S1_6588 {
 	public static void main(String[] args) {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
