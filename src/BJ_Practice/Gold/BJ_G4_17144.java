@@ -70,7 +70,7 @@ public class BJ_G4_17144 {
 
 		for (int r = 0; r < R; r++)
 			for (int c = 0; c < C; c++)
-				if (home[r][c] > 0)
+				if (home[r][c] > 4)
 					queue.offer(new RC(r, c));
 
 		while (!queue.isEmpty()) {
