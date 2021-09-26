@@ -39,6 +39,10 @@ public class BJ_G4_20058 {
 		findBiggest();
 		System.out.println(totalIce);
 		System.out.println(land);
+		
+		for (int i = 0; i < N ; i++) {
+			System.out.println(Arrays.toString(A[i]));
+		}
 
 	}
 
