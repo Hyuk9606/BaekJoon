@@ -36,18 +36,7 @@ public class BJ_G1_11401 {
 	        fac[i]=(fac[i-1]*i)%MOD;
 	    }
 	}
-	
-	static void factorial(int n) {
-		int a = 1;
-		for (int i = 1; i <= N; i++) {
-			a *= i % MOD;
-			if(i == N-M)
-				num2 = a;
-			else if(i == M)
-				num3 = a;
-		}
-		num1 = a;
-	}
+
 
 	static long power(long a, int b) {
 		if (b == 1)
