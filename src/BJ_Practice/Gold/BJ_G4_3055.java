@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.*;
 import java.util.*;
@@ -32,6 +32,10 @@ public class BJ_G4_3055 {
 		M = Integer.parseInt(st.nextToken());
 		map = new char[N][M];
 		visited = new int[N][M];
+		for (int i = 0; i < N ; i++) {
+			Arrays.fill(visited[i] , -1000);
+		}
+
 
 		for (int r = 0; r < N; r++) {
 			map[r] = br.readLine().toCharArray();
@@ -45,6 +49,13 @@ public class BJ_G4_3055 {
 			}
 		}
 		Flood();
+		
+		for (int i = 0; i < N ; i++) {
+			for (int j = 0; j < M ; j++) {
+				if(visited[i][j] == -1000 && map[i][j] == '.')
+					visited[i][j] = 1000;
+			}
+		}
 		
 //		for (int i = 0; i < N; i++) {
 //			System.out.println(Arrays.toString(visited[i]));
@@ -71,7 +82,7 @@ public class BJ_G4_3055 {
 			for (int i = 0; i < 4; i++) {
 				int nr = temp.r + deltas[i][0];
 				int nc = temp.c + deltas[i][1];
-				if (isIn(nr, nc) && visited[nr][nc] == 0 && map[nr][nc] == '.') {
+				if (isIn(nr, nc) && visited[nr][nc] == -1000 && map[nr][nc] == '.') {
 					queue.offer(new RC(nr, nc));
 					visited[nr][nc] = visited[temp.r][temp.c] + 1;
 				}
