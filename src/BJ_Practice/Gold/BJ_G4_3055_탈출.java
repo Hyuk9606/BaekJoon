@@ -3,7 +3,7 @@ package BJ_Practice.Gold;
 import java.io.*;
 import java.util.*;
 
-public class BJ_G4_3055 {
+public class BJ_G4_3055_탈출 {
 	static int N, M;
 	static char[][] map;
 	static int[][] visited;
@@ -32,10 +32,9 @@ public class BJ_G4_3055 {
 		M = Integer.parseInt(st.nextToken());
 		map = new char[N][M];
 		visited = new int[N][M];
-		for (int i = 0; i < N ; i++) {
-			Arrays.fill(visited[i] , -1000);
+		for (int i = 0; i < N; i++) {
+			Arrays.fill(visited[i], -1000);
 		}
-
 
 		for (int r = 0; r < N; r++) {
 			map[r] = br.readLine().toCharArray();
@@ -44,33 +43,35 @@ public class BJ_G4_3055 {
 					HedgeDog = new RC(r, c);
 				else if (map[r][c] == '*')
 					flood.add(new RC(r, c));
-				else if(map[r][c] == 'D')
-					Dodge = new RC(r,c);
+				else if (map[r][c] == 'D')
+					Dodge = new RC(r, c);
 			}
 		}
 		Flood();
-		
-		for (int i = 0; i < N ; i++) {
-			for (int j = 0; j < M ; j++) {
-				if(visited[i][j] == -1000 && map[i][j] == '.')
+
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < M; j++) {
+				if (visited[i][j] == -1000 && map[i][j] == '.')
 					visited[i][j] = 1000;
 			}
 		}
-		
+
 //		for (int i = 0; i < N; i++) {
 //			System.out.println(Arrays.toString(visited[i]));
 //		}
 
 		int answer = runAway();
-		
-		if(answer == -1) System.out.println("KAKTUS");
-		else System.out.println(answer);
-		
+
+		if (answer == -1)
+			System.out.println("KAKTUS");
+		else
+			System.out.println(answer);
+
 	}
 
 	static void Flood() {
 		Queue<RC> queue = new LinkedList<>();
-		for (int i = 0; i < flood.size() ; i++) {
+		for (int i = 0; i < flood.size(); i++) {
 			queue.offer(flood.get(i));
 			RC temp = flood.get(i);
 			visited[temp.r][temp.c] = 1;
@@ -94,7 +95,7 @@ public class BJ_G4_3055 {
 	static int runAway() {
 		Queue<RC> queue = new LinkedList<>();
 		boolean[][] route = new boolean[N][M];
-		int [][] check = new int[N][M];
+		int[][] check = new int[N][M];
 		queue.offer(HedgeDog);
 		route[HedgeDog.r][HedgeDog.c] = true;
 		int runningTime = 1;
@@ -109,18 +110,18 @@ public class BJ_G4_3055 {
 //					for (int i = 0; i < N ; i++) {
 //						System.out.println(Arrays.toString(check[i]));
 //					}
-					return runningTime-1;
+					return runningTime - 1;
 				}
-				
+
 				for (int i = 0; i < 4; i++) {
 					int nr = temp.r + deltas[i][0];
 					int nc = temp.c + deltas[i][1];
 
-					if (isIn(nr, nc) && !route[nr][nc] ) {
+					if (isIn(nr, nc) && !route[nr][nc]) {
 //						System.out.println("run : "+ (runningTime+1) +"/ visit : " + visited[nr][nc] + "/  nr,nc " + nr + " " + nc);
-						if(Integer.compare(visited[nr][nc],  runningTime+1)>0) {
+						if (Integer.compare(visited[nr][nc], runningTime + 1) > 0) {
 							queue.offer(new RC(nr, nc));
-							check[nr][nc] = runningTime;							
+							check[nr][nc] = runningTime;
 						}
 						route[nr][nc] = true;
 					}
