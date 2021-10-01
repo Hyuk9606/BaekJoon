@@ -62,27 +62,17 @@ public class BJ_G5_14891_톱니바퀴 {
 			boolean check[] = new boolean[4];
 			for (int j = num; j < 3; j++) {
 				if (gears[j].getMagneticRight() != gears[j + 1].getMagneticLeft()) {
-//						check[j] = true;
 					check[j + 1] = true;
 				} else {
 					check[j + 1] = false;
 					break;
 				}
 
-			}
-//				System.out.println(gears[1].getMagneticLeft());
-//				System.out.println(Arrays.toString(check));
-//				
-//				System.out.println((gears[0].magnetic & (1<<5)) + " " + (gears[0].magnetic & (1<<1)));
-//				System.out.println((gears[1].magnetic & (1<<5)) + " " + (gears[1].magnetic & (1<<1)));
-//				System.out.println((gears[2].magnetic & (1<<5)) + " " + (gears[2].magnetic & (1<<1)));
-//				System.out.println((gears[3].magnetic & (1<<5)) + " " + (gears[3].magnetic & (1<<1)));
-//				
+			}	
 
 			for (int j = num; j > 0; j--) {
 
 				if (gears[j].getMagneticLeft() != gears[j - 1].getMagneticRight()) {
-//						check[j] = true;
 					check[j - 1] = true;
 				} else {
 					check[j - 1] = false;
@@ -90,7 +80,6 @@ public class BJ_G5_14891_톱니바퀴 {
 				}
 			}
 			check[num] = true;
-//				System.out.println(Arrays.toString(check));
 
 			for (int j = 0; j < 4; j++) {
 				if (check[j]) {

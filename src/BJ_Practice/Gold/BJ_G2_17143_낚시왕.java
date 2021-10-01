@@ -27,7 +27,8 @@ public class BJ_G2_17143_낚시왕 {
 			this.d = d;
 			this.z = z;
 		}
-
+		
+		// 크기는 Unique하므로 크기가 같으면 같은 객체로 판단.
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj)
@@ -77,7 +78,7 @@ public class BJ_G2_17143_낚시왕 {
 			System.out.println(answer);
 
 	}
-
+	//낚시
 	static void fishing(int c) {
 		for (int i = 1; i <= R; i++) {
 			if (map[i][c] > 0) {
@@ -88,7 +89,8 @@ public class BJ_G2_17143_낚시왕 {
 			}
 		}
 	}
-
+	
+	//헤엄
 	static void swimming() {
 		for (int i = 0; i < list.size(); i++) {
 			Shark temp = list.get(i);
@@ -108,7 +110,8 @@ public class BJ_G2_17143_낚시왕 {
 			}
 		}
 	}
-
+	
+	//맵에 집어넣으면서 이미 어떤 값이 들어가 있으면 크기비교를 하고 작은건 리스트에서 삭제.
 	static int[][] setUp() {
 		int[][] tempMap = new int[R + 1][C + 1];
 		for (int i = 0; i < list.size(); i++) {
