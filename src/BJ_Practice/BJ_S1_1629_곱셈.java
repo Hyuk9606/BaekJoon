@@ -3,7 +3,7 @@ package BJ_Practice;
 import java.io.*;
 import java.util.*;
 
-public class BJ_S1_1629 {
+public class BJ_S1_1629_곱셈 {
 	static int A, B, C;
 	static StringTokenizer st;
 
