@@ -42,12 +42,6 @@ public class BJ_G2_17143_낚시왕 {
 				return false;
 			return true;
 		}
-
-		@Override
-		public String toString() {
-			return "\n[r=" + r + ", c=" + c + ", s=" + s + ", d=" + d + ", z=" + z + "]";
-		}
-
 	}
 
 	public static void main(String[] args) throws IOException {
