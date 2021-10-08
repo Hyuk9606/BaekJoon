@@ -21,12 +21,15 @@ public class BJ_S2_14465_소가_길을_건너간_이유5 {
 		Arrays.fill(PS, 1);
 		for (int i = 0; i < B; i++) {
 			int num = Integer.parseInt(br.readLine());
+			
 			PS[num] = 0;
 		}
-		
+		System.out.println(Arrays.toString(PS));
 		for (int i = 1; i <= N; i++) {
 			PS[i] += PS[i-1];
 		}
+		
+		System.out.println(Arrays.toString(PS));
 		int answer = 0;
 		for (int i = K; i <=N; i++) {
 			answer = Math.max(answer, PS[i]-PS[i-K]);
