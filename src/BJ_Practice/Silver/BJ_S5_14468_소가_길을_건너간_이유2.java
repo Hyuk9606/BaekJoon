@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Silver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
