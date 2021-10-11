@@ -1,15 +1,14 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class BJ_G5_15683_감시 {
 	static int N, M;
 	static int answer = 0;
+	static int count = 0;
 	static int map[][];
 	static int[][] deltas = { { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 0 } };
 	static int[][] direction = { { 0 }, { 0, 2 }, { 0, 1 }, { 0, 1, 2 }, { 0, 1, 2, 3 } };
@@ -41,9 +40,16 @@ public class BJ_G5_15683_감시 {
 			for (int j = 0; j < M; j++) {
 				map[i][j] = Integer.parseInt(st.nextToken());
 				if (map[i][j] > 0 && map[i][j] < 6)
-					list.add(new CCTV(i, j, map[i][j]));
+					list.add(new CCTV(i, j, map[i][j] - 1));
+				else if (map[i][j] == 0)
+					count++;
 			}
 		}
+
+		for (int i = 0; i < 4; i++) {
+			observe(0, i, map);
+		}
+		System.out.println(count - answer);
 
 	}
 
@@ -59,24 +65,30 @@ public class BJ_G5_15683_감시 {
 			answer = Math.max(count, answer);
 			return;
 		}
+		int[][] temp = new int[N][M];
+		for (int i = 0; i < N; i++) {
+			temp[i] = Arrays.copyOf(map[i], M);
+		}
 
-		int nr = list.get(cctv).r;
-		int nc = list.get(cctv).c;
-		for (int j = 0; j < direction[list.get(cctv).dir].length; j++) {
+		int cctvdir = list.get(cctv).dir;
+		for (int j = 0; j < direction[cctvdir].length; j++) {
+			int nr = list.get(cctv).r;
+			int nc = list.get(cctv).c;
 			while (isIn(nr, nc) && map[nr][nc] < 6) {
-				nr += deltas[(j + dir) % 4][0];
-				nc += deltas[(j + dir) % 4][1];
-				if (map[nr][nc] == 0) {
-					map[nr][nc] = -1;
+				nr += deltas[(direction[cctvdir][j] + dir) % 4][0];
+				nc += deltas[(direction[cctvdir][j] + dir) % 4][1];
+				if (isIn(nr, nc) && temp[nr][nc] == 0) {
+					temp[nr][nc] = -1;
 				}
 			}
-			observe(cctv + 1, dir, map);
 		}
-		observe(cctv, dir + 1, map);
+		for (int i = 0; i < 4 ; i++) {
+			observe(cctv+1,i,temp);
+		}
 
 	}
 
 	static boolean isIn(int r, int c) {
-		return r >= 0 && r < N && c >= 0 && c < N;
+		return r >= 0 && r < N && c >= 0 && c < M;
 	}
 }
