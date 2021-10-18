@@ -24,7 +24,7 @@ public class BJ_S1_1149 {
 			for (int j = 0; j < 3 ; j++) {
 				int min = 9999999;
 				for (int k = 0; k < 3 ; k++) {
-					if(k != j)
+					if(k != j )
 						min = Integer.min(min, colorCost[i-1][k]);
 				}
 				colorCost[i][j] += min;
@@ -36,9 +36,9 @@ public class BJ_S1_1149 {
 		for (int i = 0; i < 3 ; i++) {
 			answer = Integer.min(colorCost[N][i],answer);
 		}
-//		for (int i = 1; i <= N ; i++) {
-//			System.out.println(Arrays.toString(colorCost[i]));
-//		}
+		for (int i = 1; i <= N ; i++) {
+			System.out.println(Arrays.toString(colorCost[i]));
+		}
 		System.out.println(answer);
 	}
 }

@@ -25,7 +25,7 @@ public class BJ_S3_15486_퇴사2 {
 		int dp[] = new int[N + 2];
 
 		for (int i = N; i >= 0; i--) {
-//			System.out.println(Arrays.toString(dp));
+			System.out.println(Arrays.toString(dp));
 			if (i + T[i]-1 > N) {
 				dp[i] = dp[i+1];
 			}else
