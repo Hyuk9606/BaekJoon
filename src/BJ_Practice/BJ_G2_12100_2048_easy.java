@@ -27,12 +27,13 @@ public class BJ_G2_12100_2048_easy {
 			move(0, i, map);
 		}
 		System.out.println(maxNumber);
+//		move(0,3,map);
 
 	}
 
 	static void move(int cnt, int dir, int[][] map) {
 
-		if (cnt == 4) {
+		if (cnt == 5) {
 
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
@@ -47,19 +48,15 @@ public class BJ_G2_12100_2048_easy {
 			tempMap[i] = Arrays.copyOf(map[i], N);
 		}
 		int r = 0, c = 0;
-		if (dir >= 3) {
+		if (dir >= 2) {
 			r = N - 1;
 			c = N - 1;
 		}
 		int direction = dir % 2 == 0 ? dir + 1 : dir - 1;
 
 		for (int i = 0; i < N; i++) {
-			int nr = r + deltas[direction][0];
-			int nc = c + deltas[direction][1];
-			if (i == 0) {
-				nr = r;
-				nc = c;
-			}
+			int nr = r;
+			int nc = c;
 			while (isIn(nr, nc)) {
 				if (tempMap[nr][nc] != 0) {
 					stack.push(tempMap[nr][nc]);
@@ -74,19 +71,24 @@ public class BJ_G2_12100_2048_easy {
 				int number=0;
 				if (!stack.isEmpty()) {
 					number = stack.pop();
-					while (!stack.isEmpty() && stack.peek() == number) {
+					if(!stack.isEmpty() && stack.peek() == number) {
 						number += stack.pop();
 					}
-					tempMap[nr][nc] = number;
 				}
+				tempMap[nr][nc] = number;
 				nr -= deltas[dir][0];
 				nc -= deltas[dir][1];
 			}
+			r += deltas[direction][0];
+			c += deltas[direction][1];
 		}
 
 		for (int i = 0; i < 4; i++) {
 				move(cnt + 1, i, tempMap);
 		}
+//		for (int i = 0; i < N ; i++) {
+//			System.out.println(Arrays.toString(tempMap[i]));
+//		}
 	}
 
 	static boolean isIn(int r, int c) {
