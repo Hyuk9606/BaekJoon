@@ -34,7 +34,7 @@ public class BJ_G5_12904_A와_B {
 			return true;
 		}
 
-		String reverse = new StringBuffer(str);
+		String reverse = "";
 		for (int i = str.length() - 1; i >= 0; i--) {
 			reverse += str.charAt(i);
 		}
