@@ -22,6 +22,7 @@ public class BJ_B2_2231_분해합 {
 				return;
 			}
 		}
+		System.out.println(0);
 		
 	}
 }
