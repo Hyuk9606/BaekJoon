@@ -21,7 +21,7 @@ public class BJ_B5_3003 {
 		for (int i = 0; i < 6 ; i++) {
 			int num = Integer.parseInt(st.nextToken());
 			chess[i] = chess[i]-num;
-		}
+		} 
 		
 		for(int number : chess) {
 			sb.append(number).append(" ");
