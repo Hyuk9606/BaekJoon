@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.*;
 import java.util.*;
@@ -72,6 +72,7 @@ public class BJ_G5_14500_테트로미노 {
 			RC temp = queue.poll();
 			store[i] = temp;
 			sum += temp.num;
+			visited[temp.r][temp.c] = true;
 			if(i == 3) {
 				for (int j = 0; j < 4 ; j++) {
 					RC temp2 = store[j];
@@ -85,7 +86,6 @@ public class BJ_G5_14500_테트로미노 {
 				
 				if(isIn(nr,nc) && !visited[nr][nc]) {
 					queue.offer(new RC(nr,nc,map[nr][nc]));
-					visited[nr][nc] = true;
 				}
 			}
 		}
