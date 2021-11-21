@@ -40,6 +40,9 @@ public class BJ_G4_2638_치즈 {
 		int answer = 0;
 		while(bfs() != 0) {
 			answer++;
+			for (int i = 0; i < N ; i++) {
+				Arrays.fill(visited[i], false);
+			}
 		}
 		System.out.println(answer);
 	}
@@ -65,18 +68,13 @@ public class BJ_G4_2638_치즈 {
 		}
 		
 		for (int i = 0; i < N ; i++) {
-			System.out.println(Arrays.toString(map[i]));
-		}
-		System.out.println();
-		
-		for (int i = 0; i < N ; i++) {
 			for (int j = 0; j < M ; j++) {
 				if(map[i][j] == 2) {
 					int cnt = 0;
 					for (int k = 0; k < 4 ; k++) {
 						int nr = i + deltas[k][0];
 						int nc = j + deltas[k][1];
-						if(isIn(nr,nc) && map[nr][nc] == 2) {
+						if(isIn(nr,nc) && map[nr][nc] == 0 && visited[nr][nc]) {
 							cnt++;
 						}
 					}
@@ -84,6 +82,7 @@ public class BJ_G4_2638_치즈 {
 				}
 			}
 		}
+		
 		int cnt = 0;
 		for (int i = 0; i < N ; i++) {
 			for (int j = 0; j < M ; j++) {
@@ -93,7 +92,6 @@ public class BJ_G4_2638_치즈 {
 				}
 			}
 		}
-		
 		return cnt;
 		
 	}
