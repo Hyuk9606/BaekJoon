@@ -114,6 +114,5 @@ public class SWEA_SW_4014_활주로_건설 {
 			sb.append("#").append(t).append(" ").append(answer).append("\n");
 		}
 		System.out.println(sb);
-
 	}
 }
