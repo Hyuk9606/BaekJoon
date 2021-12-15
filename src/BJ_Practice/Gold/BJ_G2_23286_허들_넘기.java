@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ public class BJ_G2_23286_허들_넘기 {
 
 	static int N, M, T;
 	static Node graph[];
-	static int[][] distance;
+	static int[][] minHeight;
 	static int[][] route;
 	static StringTokenizer st;
 
@@ -52,7 +52,6 @@ public class BJ_G2_23286_허들_넘기 {
 		
 		dijkstra();	// 다익스트라 수행 ( 플로이드 워셜로 대체 가능할 듯. )
 		
-		
 		for (int i = 0; i < T; i++) {
 			st = new StringTokenizer(br.readLine());
 			int start = Integer.parseInt(st.nextToken());
@@ -68,18 +67,18 @@ public class BJ_G2_23286_허들_넘기 {
 
 
 	static void dijkstra() {
-		distance = new int[N + 1][N + 1];
+		minHeight = new int[N + 1][N + 1];
 		route = new int[N + 1][N + 1];
 		
 		PriorityQueue<Node> pq = new PriorityQueue<>();
 		for (int i = 1; i <= N; i++) {	// 모든 정점을 출발지로 해서  갯수만큼 다익스트라 수행.
 			pq.clear();
-			Arrays.fill(distance[i], 100000000);
+			Arrays.fill(minHeight[i], 100000000);
 			boolean[] visited = new boolean[N + 1];
 			// 필요한 변수 초기화
 
 			pq.offer(new Node(i, 0, graph[i]));
-			distance[i][i] = 0;
+			minHeight[i][i] = 0;
 			route[i][i] = 0;
 
 			while (!pq.isEmpty()) {
@@ -89,12 +88,10 @@ public class BJ_G2_23286_허들_넘기 {
 				visited[curr.v] = true;
 
 				for (Node temp = graph[curr.v]; temp != null; temp = temp.link) {
-					if (!visited[temp.v] && distance[i][temp.v] > temp.h) {
+					if (!visited[temp.v] && minHeight[i][temp.v] > temp.h) {
 						pq.offer(new Node(temp.v, temp.h, null));
 						// 방문할 때 그 정점과 연결된 최소크기로 저장
-						distance[i][temp.v] = Math.min(distance[i][temp.v], temp.h);
-						
-						
+						minHeight[i][temp.v] = Math.min(minHeight[i][temp.v], temp.h);
 						route[i][temp.v] = curr.v;
 					}
 				}
@@ -103,14 +100,13 @@ public class BJ_G2_23286_허들_넘기 {
 	}
 
 	static int findMin(int start, int end) {
-		int res = Integer.MIN_VALUE;
+		int res = 0;
 		for (int i = 1; i <= N; i++) {
 			while (end != 0) {
-				res = Math.max(res, distance[start][end]);
+				res = Math.max(res, minHeight[start][end]);
 				end = route[start][end];
 			}
 		}
-
 		return res;
 	}
 
