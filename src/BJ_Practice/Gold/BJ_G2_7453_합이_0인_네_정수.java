@@ -40,7 +40,7 @@ public class BJ_G2_7453_합이_0인_네_정수 {
 
 		int end = N * N;
 		while (first < end && 0 <= second) {
-			long sum = (long) preSum[0][first] + preSum[1][second];
+			int sum =  preSum[0][first] + preSum[1][second];
 			int firstCnt =1;
 			int secondCnt = 1;
 			if (sum == 0) {
