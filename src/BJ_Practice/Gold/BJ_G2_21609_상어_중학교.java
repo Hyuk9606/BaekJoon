@@ -13,8 +13,8 @@ public class BJ_G2_21609_상어_중학교 {
 	static PriorityQueue<Standard> standardBlockList = new PriorityQueue<>();
 	static Queue<Position> queue = new LinkedList<>();
 	static StringTokenizer st;
-
-	static class Position {
+	
+	static class Position{
 		int r, c;
 
 		public Position(int r, int c) {
