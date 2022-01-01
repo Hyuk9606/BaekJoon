@@ -13,7 +13,7 @@ public class BJ_G4_3584_가장_가까운_공통_조상 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 
-		T = Integer.parseInt(br.readLine());
+		T = Integer.parseInt(br.readLine()); 
 		for (int t = 1; t <= T; t++) {
 			N = Integer.parseInt(br.readLine());
 
