@@ -28,119 +28,38 @@ public class BJ_G4_15684_사다리_조작 {
 			ladder[r][c] = 1;
 		}
 
-		if (check()) {
-			System.out.println(0);
-			return;
-		}
-		
-		for (int r = 1; r <= H; r++) {
-			for (int c = 1; c < N; c++) {
-				if (ladder[r][c] == 1)
-					continue;
-				if (c > 1 && ladder[r][c - 1] == 1) {
-					continue;
-				}
-				if (c < N - 1 && ladder[r][c + 1] == 1) {
-					continue;
-				}
-				ladder[r][c] = 1;
-				if (!check()) {
-					ladder[r][c] = 0;
-				} else {
-					System.out.println(1);
-					return;
-				}
-			}
-		}
-
-		for (int r1 = 1; r1 <= H; r1++) {
-			for (int c1 = 1; c1 < N; c1++) {
-				if (ladder[r1][c1] == 1)
-					continue;
-				if (c1 > 1 && ladder[r1][c1 - 1] == 1) {
-					continue;
-				}
-				if (c1 < N - 1 && ladder[r1][c1 + 1] == 1) {
-					continue;
-				}
-				ladder[r1][c1] = 1;
-				for (int r2 = r1; r2 <= H; r2++) {
-					for (int c2 = 1; c2 < N; c2++) {
-						if (ladder[r2][c2] == 1) {
-							continue;
-						}
-						if (c2 > 1 && ladder[r2][c2 - 1] == 1) {
-							continue;
-						}
-						if (c2 < N - 1 && ladder[r2][c2 + 1] == 1) {
-							continue;
-						}
-						ladder[r2][c2] = 1;
-						if (!check()) {
-							ladder[r2][c2] = 0;
-						} else {
-							System.out.println(2);
-							return;
-						}
-					}
-				}
-				ladder[r1][c1] = 0;
-			}
-		}
-
-		for (int r1 = 1; r1 <= H; r1++) {
-			for (int c1 = 1; c1 < N; c1++) {
-				if (ladder[r1][c1] == 1)
-					continue;
-				if (ladder[r1][c1 - 1] == 1) {
-					continue;
-				}
-				if (ladder[r1][c1 + 1] == 1) {
-					continue;
-				}
-				ladder[r1][c1] = 1;
-				for (int r2 = r1; r2 <= H; r2++) {
-					for (int c2 = 1; c2 < N; c2++) {
-						if (ladder[r2][c2] == 1) {
-							continue;
-						}
-						if (ladder[r2][c2 - 1] == 1) {
-							continue;
-						}
-						if (ladder[r2][c2 + 1] == 1) {
-							continue;
-						}
-						ladder[r2][c2] = 1;
-						for (int r3 = r2; r3 <= H; r3++) {
-							for (int c3 = 1; c3 < N; c3++) {
-								if (ladder[r3][c3] == 1)
-									continue;
-								if (ladder[r3][c3 - 1] == 1) {
-									continue;
-								}
-								if (ladder[r3][c3 + 1] == 1) {
-									continue;
-								}
-								ladder[r3][c3] = 1;
-								if (!check()) {
-									ladder[r3][c3] = 0;
-								} else {
-									System.out.println(3);
-									return;
-								}
-							}
-						}
-						ladder[r2][c2] = 0;
-					}
-				}
-				ladder[r1][c1] = 0;
-			}
+		for (int i = 0; i <= 3; i++) {
+			comb(1, 0, i);
 		}
 		System.out.println(-1);
 
 	}
 
-	static void comb(int cnt) {
+	static void comb(int nr, int cnt, int size) {
+		if (cnt == size) {
+			if (check()) {
+				System.out.println(size);
+				System.exit(0);
+			}
+			return;
+		}
+
+		for (int r = nr; r <= H; r++) {
+			for (int c = 1; c < N; c++) {
+				if (ladder[r][c] == 1)
+					continue;
+				if (ladder[r][c - 1] == 1) {
+					continue;
+				}
+				if (ladder[r][c + 1] == 1) {
+					continue;
+				}
+				ladder[r][c] = 1;
+				comb(r, cnt + 1, size);
+				ladder[r][c] = 0;
+
+			}
+		}
 
 	}
 
@@ -162,7 +81,7 @@ public class BJ_G4_15684_사다리_조작 {
 			if (i != currPosition)
 				return false;
 		}
-	
+
 		return true;
 	}
 }
