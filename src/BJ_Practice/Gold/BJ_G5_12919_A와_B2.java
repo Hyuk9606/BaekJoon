@@ -34,6 +34,7 @@ public class BJ_G5_12919_A와_B2 {
 				return true;
 			}
 		}
+		
 		if(str.charAt(0) == 'B') {
 			StringBuilder reverse = new StringBuilder();
 			reverse.append(str.substring(1,str.length()));
