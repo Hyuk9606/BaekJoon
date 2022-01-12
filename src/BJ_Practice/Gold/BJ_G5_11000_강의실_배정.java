@@ -21,28 +21,29 @@ public class BJ_G5_11000_강의실_배정 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		
-		PriorityQueue<Time> pqA = new PriorityQueue<>((o1,o2)-> {return o1.start - o2.start;});
-		PriorityQueue<Time> pqB = new PriorityQueue<>((o1,o2)-> {return o1.end - o2.end;});
+		PriorityQueue<Time> waitPQ = new PriorityQueue<>((o1,o2)-> {return o1.start - o2.start;});
+		PriorityQueue<Time> ingPQ = new PriorityQueue<>((o1,o2)-> {return o1.end - o2.end;});
+		
 		N = Integer.parseInt(br.readLine());
 		for (int i = 0; i < N ; i++) {
 			st = new StringTokenizer(br.readLine());
 			int start = Integer.parseInt(st.nextToken());
 			int end = Integer.parseInt(st.nextToken());
-			pqA.offer(new Time(start,end));
+			waitPQ.offer(new Time(start,end));
 		}
 		int max = -1;
-		while(!pqA.isEmpty()) {
-			Time temp = pqA.poll();
+		while(!waitPQ.isEmpty()) {
+			Time temp = waitPQ.poll();
 			
-			if(pqB.isEmpty()) {
-				pqB.add(temp);
+			if(ingPQ.isEmpty()) {
+				ingPQ.add(temp);
 				max = Math.max(max, 1);
 			}else {
-				while(!pqB.isEmpty() && pqB.peek().end <= temp.start){
-					pqB.poll();
+				while(!ingPQ.isEmpty() && ingPQ.peek().end <= temp.start){
+					ingPQ.poll();
 				}
-				pqB.offer(temp);
-				max = Math.max(max, pqB.size());
+				ingPQ.offer(temp);
+				max = Math.max(max, ingPQ.size());
 			}
 		}
 		System.out.println(max);
