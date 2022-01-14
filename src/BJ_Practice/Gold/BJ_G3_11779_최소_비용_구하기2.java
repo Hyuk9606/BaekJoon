@@ -6,7 +6,7 @@ import java.util.*;
 public class BJ_G3_11779_최소_비용_구하기2 {
 
 	static int N, M, T;
-	static Node graph[];
+	static Node[] graph;
 	static StringTokenizer st;
 
 	static class Node implements Comparable<Node> {

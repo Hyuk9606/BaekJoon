@@ -13,7 +13,7 @@ public class BJ_S3_9461_파도반_수열 {
 		StringBuilder sb = new StringBuilder();
 
 		T = Integer.parseInt(br.readLine());
-		int input[] = new int[T];
+		int[] input = new int[T];
 		int N = 0;
 		for (int t = 1; t <= T; t++) {
 			input[t-1] = Integer.parseInt(br.readLine());

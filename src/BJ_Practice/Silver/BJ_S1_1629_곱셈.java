@@ -18,7 +18,7 @@ public class BJ_S1_1629_곱셈 {
 
 		
 
-		System.out.println(power((long)A,B));
+		System.out.println(power(A,B));
 	}
 
 	static long power(long a, int b) {

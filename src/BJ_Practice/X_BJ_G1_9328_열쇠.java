@@ -8,7 +8,7 @@ public class X_BJ_G1_9328_열쇠 {
 	static int T;
 	static int N, M; 
 	static char[][] map;
-	static boolean visited[][][];
+	static boolean[][][] visited;
 	static int[][] deltas = { { 0, 1 }, { 0, -1 }, { -1, 0 }, { 0, -1 } };
 	static String key = "";
 	static List<RC> entrance = new ArrayList<>();

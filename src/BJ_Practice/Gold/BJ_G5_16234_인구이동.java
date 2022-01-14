@@ -103,10 +103,8 @@ public class BJ_G5_16234_인구이동 {
 			map[temp.r][temp.c] = sum / count;
 		}
 
-		if (count > 1)
-			return true;
-		return false;
-	}
+        return count > 1;
+    }
 
 	static boolean isIn(int r, int c) {
 		return r >= 0 && c >= 0 && c < N && r < N;

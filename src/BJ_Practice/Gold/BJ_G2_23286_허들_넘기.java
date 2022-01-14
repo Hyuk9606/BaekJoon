@@ -6,7 +6,7 @@ import java.util.*;
 public class BJ_G2_23286_허들_넘기 {
 
 	static int N, M, T;
-	static Node graph[];
+	static Node[] graph;
 	static int[][] minHeight;
 	static int[][] route;
 	static StringTokenizer st;

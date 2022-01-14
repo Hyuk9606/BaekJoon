@@ -7,9 +7,9 @@ public class BJ_G3_1005_ACM_Craft {
 
 	static int T;
 	static int N, M;
-	static int time[];
+	static int[] time;
 	static int[] indegree;
-	static Node adjList[];
+	static Node[] adjList;
 	static int endPoint;
 	static StringTokenizer st;
 
@@ -59,7 +59,7 @@ public class BJ_G3_1005_ACM_Craft {
 
 	static void bfs() {
 		Queue<Integer> queue = new LinkedList<>();
-		int result[] = new int[N + 1];
+		int[] result = new int[N + 1];
 		for (int i = 1; i <= N; i++) {
 			result[i] = time[i];
 

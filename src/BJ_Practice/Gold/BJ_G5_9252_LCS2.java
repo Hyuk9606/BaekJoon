@@ -14,7 +14,7 @@ public class BJ_G5_9252_LCS2 {
 		String s1 = br.readLine();
 		String s2 = br.readLine();
 
-		int lcs[][] = new int[s1.length() + 1][s2.length() + 1];
+		int[][] lcs = new int[s1.length() + 1][s2.length() + 1];
 
 		for (int i = 1; i <= s1.length(); i++) {
 			for (int j = 1; j <= s2.length(); j++) {

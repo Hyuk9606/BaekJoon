@@ -35,7 +35,7 @@ public class BJ_S2_11724_연결_요소의_개수 {
 			System.exit(0);
 		}
 
-		boolean visited[] = new boolean[N + 1];
+		boolean[] visited = new boolean[N + 1];
 		Node[] adjList = new Node[N + 1];
 		for (int i = 0; i < M; i++) {
 			st = new StringTokenizer(br.readLine());

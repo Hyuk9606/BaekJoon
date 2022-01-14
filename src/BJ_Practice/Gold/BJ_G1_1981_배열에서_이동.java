@@ -7,7 +7,7 @@ public class BJ_G1_1981_배열에서_이동 {
 
 	static int N;
 	static int[][] map;
-	static boolean visited[][];
+	static boolean[][] visited;
 	static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 	static int min = 1000, max = 0;
 	static StringTokenizer st;

@@ -6,7 +6,7 @@ import java.util.*;
 public class BJ_P5_2568_전깃줄2 {
 
 	static int N;
-	static int LIS[];
+	static int[] LIS;
 	static StringTokenizer st;
 	
 	static class elecLine implements Comparable<elecLine>{
@@ -37,8 +37,8 @@ public class BJ_P5_2568_전깃줄2 {
 		StringBuilder sb = new StringBuilder();
 		
 		N = Integer.parseInt(br.readLine());
-		elecLine data[] = new elecLine[N];
-		int answer[] = new int[N];
+		elecLine[] data = new elecLine[N];
+		int[] answer = new int[N];
 		LIS = new int[N+1];
 		
 		for (int i = 0; i < N ; i++) {

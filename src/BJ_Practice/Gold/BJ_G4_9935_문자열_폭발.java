@@ -9,7 +9,7 @@ public class BJ_G4_9935_문자열_폭발 {
 		for (char iii = '1'; iii <= '1' + 9; iii++) {
 			for (char kkk = 'a'; kkk < 'a' + 3; kkk++) {
 				String s = "";
-				s += (char) iii + "" + (char) kkk;
+				s += iii + "" + kkk;
 				if(iii == '1'+9) s = "10"+kkk; 
 				
 

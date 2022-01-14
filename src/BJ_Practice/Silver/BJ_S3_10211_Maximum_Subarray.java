@@ -14,7 +14,7 @@ public class BJ_S3_10211_Maximum_Subarray {
 		T = Integer.parseInt(br.readLine());
 		for (int t = 1; t <= T; t++) {
 			N = Integer.parseInt(br.readLine());
-			int data[] = new int[N+1];
+			int[] data = new int[N+1];
 			
 			st = new StringTokenizer(br.readLine());
 			for (int i = 1; i <= N ; i++) {

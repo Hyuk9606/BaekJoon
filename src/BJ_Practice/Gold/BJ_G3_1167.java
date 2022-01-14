@@ -31,9 +31,9 @@ public class BJ_G3_1167 {
 		@Override
 		public int compareTo(Node o) {
 			return Integer.compare(this.weight, o.weight);
-		};
+		}
 
-	}
+    }
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

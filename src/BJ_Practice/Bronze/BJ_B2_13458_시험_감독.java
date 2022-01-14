@@ -5,7 +5,7 @@ import java.util.*;
 
 public class BJ_B2_13458_시험_감독 {
 	static int N;
-	static int A[];
+	static int[] A;
 	static int B, C;
 	static long ans = 0;
 

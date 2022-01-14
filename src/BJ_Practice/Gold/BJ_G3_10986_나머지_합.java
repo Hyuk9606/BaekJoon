@@ -6,8 +6,8 @@ import java.util.*;
 public class BJ_G3_10986_나머지_합 {
 	static int N,M;
 	static long answer= 0L;
-	static int data[];
-	static int cnt[];
+	static int[] data;
+	static int[] cnt;
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws IOException {

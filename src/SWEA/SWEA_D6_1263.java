@@ -37,7 +37,7 @@ public class SWEA_D6_1263 {
 			st = new StringTokenizer(br.readLine());
 			N = Integer.parseInt(st.nextToken());
 			
-			int data[][] = new int[N+1][N+1];
+			int[][] data = new int[N+1][N+1];
 			
 			for (int i = 1; i <= N ; i++) {
 				for (int j = 1; j <= N ; j++) {

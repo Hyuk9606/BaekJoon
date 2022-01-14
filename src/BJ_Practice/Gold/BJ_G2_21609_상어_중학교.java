@@ -7,9 +7,9 @@ public class BJ_G2_21609_상어_중학교 {
 
 	static int N, M;
 	static int score = 0;
-	static int map[][];
-	static boolean visited[][];
-	static int deltas[][] = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
+	static int[][] map;
+	static boolean[][] visited;
+	static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 	static PriorityQueue<Standard> standardBlockList = new PriorityQueue<>();
 	static Queue<Position> queue = new LinkedList<>();
 	static StringTokenizer st;

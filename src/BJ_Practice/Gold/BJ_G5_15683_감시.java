@@ -9,7 +9,7 @@ public class BJ_G5_15683_감시 {
 	static int N, M;
 	static int answer = 0;
 	static int count = 0;
-	static int map[][];
+	static int[][] map;
 	static int[][] deltas = { { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 0 } };
 	static int[][] direction = { { 0 }, { 0, 2 }, { 0, 1 }, { 0, 1, 2 }, { 0, 1, 2, 3 } };
 	static List<CCTV> list = new ArrayList<>();

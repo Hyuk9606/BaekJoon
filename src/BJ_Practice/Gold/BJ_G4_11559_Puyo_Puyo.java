@@ -8,7 +8,7 @@ public class BJ_G4_11559_Puyo_Puyo {
 	static int answer = 0;
 	static char[][] map = new char[12][6];
 	static boolean[][] visited = new boolean[12][6];
-	static int deltas[][] = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
+	static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 
 	static class Position {
 		int r, c;

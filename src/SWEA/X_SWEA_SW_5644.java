@@ -281,14 +281,8 @@ public class X_SWEA_SW_5644 {
 		int distA = Math.abs(manA.r - B.c) + Math.abs(manA.c - B.r);
 		int distB = Math.abs(manB.r - B.c) + Math.abs(manB.c - B.r);
 
-		if (distA <= B.coverage) {
-			B.Aused = true;
-		} else
-			B.Aused = false;
-		if (distB <= B.coverage) {
-			B.Bused = true;
-		} else
-			B.Bused = false;
+        B.Aused = distA <= B.coverage;
+        B.Bused = distB <= B.coverage;
 
 		return B;
 	}

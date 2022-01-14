@@ -21,7 +21,7 @@ public class BJ_B2_1100_하얀칸 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		
-		char map [][] = new char[8][8];
+		char[][] map = new char[8][8];
 		for (int i = 0; i < 8 ; i++) {
 			map[i] = br.readLine().toCharArray();
 		}

@@ -5,7 +5,7 @@ import java.util.*;
 
 public class BJ_G5_2015_수들의_합4 {
 	static int N, K;
-	static int data[];
+	static int[] data;
 	static Map<Integer, Long> map = new HashMap<>();
 	static StringTokenizer st;
 

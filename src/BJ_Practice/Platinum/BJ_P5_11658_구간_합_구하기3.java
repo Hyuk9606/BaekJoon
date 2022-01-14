@@ -5,8 +5,8 @@ import java.util.*;
 
 public class BJ_P5_11658_구간_합_구하기3 {
 	static int N, M;
-	static int data[][];
-	static int BIT[][];
+	static int[][] data;
+	static int[][] BIT;
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws IOException {

@@ -149,7 +149,7 @@ public class X_SWEA_D4_1233 {
 		preOrder(i * 2 + 1);
 	}
 
-	private static String src = "171\r\n" +
+	private static final String src = "171\r\n" +
 			"1 - 2 3\r\n" +
 			"2 - 4 5\r\n" +
 			"3 + 6 7\r\n" +

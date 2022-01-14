@@ -10,8 +10,8 @@ import java.util.StringTokenizer;
 public class BJ_S2_1012_유기농_배추 {
 	static int T;
 	static int N, M, K;
-	static int map[][];
-	static int deltas[][] = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 } };
+	static int[][] map;
+	static int[][] deltas = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 } };
 	static int Answer;
 	static StringTokenizer st;
 

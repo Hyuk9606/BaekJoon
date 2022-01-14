@@ -80,9 +80,6 @@ public class BJ_G4_4386_별자리_만들기 {
 	}
 
 	static boolean isSame(int x, int y) {
-		if (find(x) == find(y)) {
-			return true;
-		}
-		return false;
-	}
+        return find(x) == find(y);
+    }
 }

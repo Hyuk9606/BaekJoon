@@ -58,9 +58,8 @@ public class BJ_G4_1197_최소_스패닝_트리 {
 	}
 	
 	static boolean isSame(int x, int y) {
-		if(find(x) == find(y)) return true;
-		return false;
-	}
+        return find(x) == find(y);
+    }
 	
 	static int find(int x) {
 		if(x == parent[x]) {

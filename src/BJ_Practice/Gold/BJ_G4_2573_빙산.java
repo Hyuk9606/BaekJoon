@@ -29,7 +29,7 @@ public class BJ_G4_2573_빙산 {
 		N = Integer.parseInt(st.nextToken());
 		M = Integer.parseInt(st.nextToken());
 		map = new int[N][M];
-		int melt[][] = new int[N][M];
+		int[][] melt = new int[N][M];
 		visited = new boolean[N][M];
 
 		for (int i = 0; i < N; i++) {

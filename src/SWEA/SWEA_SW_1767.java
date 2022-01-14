@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class SWEA_SW_1767 {
-	static int deltas[][] = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
+	static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 	static int[][] map;
 	static int N, T;
 	static int max, minLength;

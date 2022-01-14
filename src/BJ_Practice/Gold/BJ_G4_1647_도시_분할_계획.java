@@ -63,10 +63,8 @@ public class BJ_G4_1647_도시_분할_계획 {
 
 
 	static boolean isSame(int x, int y) {
-		if (find(x) == find(y))
-			return true;
-		return false;
-	}
+        return find(x) == find(y);
+    }
 
 	static int find(int x) {
 		if (x == parent[x]) {

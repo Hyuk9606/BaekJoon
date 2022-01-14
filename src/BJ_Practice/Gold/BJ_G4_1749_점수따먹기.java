@@ -6,7 +6,7 @@ import java.util.*;
 public class BJ_G4_1749_점수따먹기 {
 
 	static int N, M;
-	static int data[][];
+	static int[][] data;
 	static StringTokenizer st;
 	
 

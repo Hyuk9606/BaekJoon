@@ -5,7 +5,7 @@ import java.util.*;
 
 public class BJ_G2_1081_합 {
 	static long L, U;
-	static long count[];
+	static long[] count;
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws IOException {

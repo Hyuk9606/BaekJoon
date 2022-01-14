@@ -10,7 +10,7 @@ public class BJ_G2_1103_게임 {
 	static int[][] dp;
 	static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 	static int answer = 0;
-	static boolean visited[][];
+	static boolean[][] visited;
 	static StringTokenizer st;
 
 	static class RC {

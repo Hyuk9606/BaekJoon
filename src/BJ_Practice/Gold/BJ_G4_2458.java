@@ -58,7 +58,7 @@ public class BJ_G4_2458 {
 		Queue<Integer> queue;
 		for (int i = 1; i <= N; i++) {
 			int cnt = 0;
-			boolean visited[] = new boolean[N + 1];
+			boolean[] visited = new boolean[N + 1];
 			queue = new LinkedList<>();
 			queue.offer(i);
 			visited[i] = true;

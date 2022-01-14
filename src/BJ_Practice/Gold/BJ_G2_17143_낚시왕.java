@@ -38,9 +38,7 @@ public class BJ_G2_17143_낚시왕 {
 			if (getClass() != obj.getClass())
 				return false;
 			Shark other = (Shark) obj;
-			if (z != other.z)
-				return false;
-			return true;
+			return z == other.z;
 		}
 	}
 

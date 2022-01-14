@@ -22,7 +22,7 @@ public class BJ_S3_15486_퇴사2 {
 			P[i] = Integer.parseInt(st.nextToken());
 		}
 
-		int dp[] = new int[N + 2];
+		int[] dp = new int[N + 2];
 
 		for (int i = N; i >= 0; i--) {
 			System.out.println(Arrays.toString(dp));

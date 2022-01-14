@@ -53,7 +53,7 @@ public class BJ_G4_2473_세_용액 {
 			start++;
 
 		}
-		long ans[] = Arrays.copyOfRange(answer, 1, 4);
+		long[] ans = Arrays.copyOfRange(answer, 1, 4);
 		Arrays.sort(ans);
 		for (int i = 0; i < 3; i++) {
 			System.out.print(ans[i] + " ");

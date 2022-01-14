@@ -8,7 +8,7 @@ public class BJ_11653 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		try {
 			int n = Integer.parseInt(br.readLine());
-			int check[] = new int[n+1];
+			int[] check = new int[n+1];
 			int n2 = n;
 			Arrays.fill(check, 0);
 			for(int i=2; i<=n;i++) {

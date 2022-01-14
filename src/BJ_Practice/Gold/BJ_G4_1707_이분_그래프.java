@@ -7,7 +7,7 @@ public class BJ_G4_1707_이분_그래프 {
 	static int T;
 	static int V,E;
 	static Node[] adjList;
-	static int visited[];
+	static int[] visited;
 	static StringTokenizer st;
 	
 	static class Node{

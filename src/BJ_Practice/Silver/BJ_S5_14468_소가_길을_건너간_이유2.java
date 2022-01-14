@@ -3,13 +3,11 @@ package BJ_Practice.Silver;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class BJ_S5_14468_소가_길을_건너간_이유2 {
 	static String str;
-	static int check[][] = new int[26][2];
+	static int[][] check = new int[26][2];
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws IOException {

@@ -7,7 +7,7 @@ public class SWEA_D3_1208 {
 
 	private static int T;
 	private static int restrict;
-	private static int[] box = new int[100];
+	private static final int[] box = new int[100];
 
 	private static int dump(int iter) {
 		int gap = 0;

@@ -7,8 +7,8 @@ public class SWEA_SW_5656_벽돌깨기 {
 	static int T;
 	static int N, W, H;
 	static int count;
-	static int map[][];
-	static int deltas[][] = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
+	static int[][] map;
+	static int[][] deltas = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
 	static StringTokenizer st;
 
 	static class Block {

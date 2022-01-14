@@ -53,8 +53,7 @@ public class BJ_G5_17135 {
 		List<Enemy> copied = new ArrayList<>();
 		for (Enemy e : enemies) {
 			copied.add(new Enemy(e.r, e.c));
-			;
-		}
+        }
 		int deadMan = 0;
 
 		while (true) {

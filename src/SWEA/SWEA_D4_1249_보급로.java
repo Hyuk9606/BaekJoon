@@ -5,8 +5,8 @@ import java.util.*;
 
 public class SWEA_D4_1249_보급로 {
 		static int N, T = 0;
-		static int map[][];
-		static int distance[][];
+		static int[][] map;
+		static int[][] distance;
 		static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 		static StringTokenizer st;
 		static StringBuilder sb = new StringBuilder();

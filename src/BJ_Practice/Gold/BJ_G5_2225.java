@@ -11,7 +11,7 @@ public class BJ_G5_2225 {
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
-        int arr[][] = new int[201][201];
+        int[][] arr = new int[201][201];
 
         // N을 1개로 나눴을 때
         for (int i = 1; i <= 200; i++) {

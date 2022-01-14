@@ -13,10 +13,7 @@ public class SWEA_D2_1974 {
 		for (int i = 0; i < 9; i++) {
 			sum -= map[r][i];
 		}
-		if (sum == 0)
-			return true;
-		else
-			return false;
+        return sum == 0;
 	}
 
 	static boolean check2(int c) {
@@ -24,10 +21,7 @@ public class SWEA_D2_1974 {
 		for (int i = 0; i < 9; i++) {
 			sum -= map[i][c];
 		}
-		if (sum == 0)
-			return true;
-		else
-			return false;
+        return sum == 0;
 	}
 
 	static boolean check3(int r, int c) {
@@ -37,10 +31,7 @@ public class SWEA_D2_1974 {
 				sum -= map[i][j];
 			}
 		}
-		if (sum == 0)
-			return true;
-		else
-			return false;
+        return sum == 0;
 	}
 
 	public static void main(String[] args) throws IOException {

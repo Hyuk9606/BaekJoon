@@ -8,7 +8,7 @@ public class BJ_G2_7453_합이_0인_네_정수 {
 	static int N;
 	static long answer = 0;
 	static int[][] data;
-	static int preSum[][];
+	static int[][] preSum;
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws IOException {

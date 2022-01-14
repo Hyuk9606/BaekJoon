@@ -125,7 +125,7 @@ public class BJ_G2_17472 {
 	
 	static int classifyIsland() {	
 		int count = 1;
-		boolean visited[][] = new boolean[N][M];
+		boolean[][] visited = new boolean[N][M];
 		Queue<RC> queue = new LinkedList<>();
 		for (int r = 0; r < N; r++) {
 			for (int c = 0; c < M; c++) {
@@ -155,7 +155,7 @@ public class BJ_G2_17472 {
 	// 다리가 연결되어 있다면 인접행렬 만들기.
 	
 	static int[][] checkConnected() {	
-		int adjMatrix[][] = new int[count + 1][count + 1];
+		int[][] adjMatrix = new int[count + 1][count + 1];
 		for (int i = 0; i < count + 1; i++) {
 			Arrays.fill(adjMatrix[i], 20000);
 		}

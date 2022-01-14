@@ -59,7 +59,7 @@ public class BJ_G5_14891_톱니바퀴 {
 			int num = Integer.parseInt(st.nextToken()) - 1;
 			int direction = Integer.parseInt(st.nextToken());
 
-			boolean check[] = new boolean[4];
+			boolean[] check = new boolean[4];
 			for (int j = num; j < 3; j++) {
 				if (gears[j].getMagneticRight() != gears[j + 1].getMagneticLeft()) {
 					check[j + 1] = true;

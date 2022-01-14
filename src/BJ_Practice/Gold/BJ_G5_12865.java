@@ -20,7 +20,7 @@ public class BJ_G5_12865 {
 			items[i][0] = Integer.parseInt(st.nextToken());
 			items[i][1] = Integer.parseInt(st.nextToken());
 		}
-		int DP[] = new int[K + 1];
+		int[] DP = new int[K + 1];
 		for (int n = 0; n < N; n++) {
 			for (int k = K; k >= items[n][0]; k--) 
 				DP[k] = Math.max(DP[k], items[n][1]+DP[k - items[n][0]]);

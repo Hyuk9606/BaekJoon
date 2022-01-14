@@ -6,7 +6,7 @@ import java.util.*;
 public class BJ_G1_1275_커피숍2 {
 
 	static int N, Q;
-	static long arr[], tree[];
+	static long[] arr, tree;
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws IOException {

@@ -5,7 +5,7 @@ import java.util.*;
 
 public class BJ_G5_20056 {
 	static int N, M, K;
-	static int deltas[][] = { { -1, 0 }, { -1, 1 }, { 0, 1 }, { 1, 1 }, { 1, 0 }, { 1, -1 }, { 0, -1 }, { -1, -1 } };
+	static int[][] deltas = { { -1, 0 }, { -1, 1 }, { 0, 1 }, { 1, 1 }, { 1, 0 }, { 1, -1 }, { 0, -1 }, { -1, -1 } };
 	static StringTokenizer st;
 	static List<FireBall> list = new ArrayList<>();
 

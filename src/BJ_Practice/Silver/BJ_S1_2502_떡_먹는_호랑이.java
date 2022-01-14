@@ -5,7 +5,7 @@ import java.util.*;
 
 public class BJ_S1_2502_떡_먹는_호랑이 {
 	static int N,M;
-	static int fibo[][];
+	static int[][] fibo;
 	
 	
 	public static void main(String[] args) throws IOException {

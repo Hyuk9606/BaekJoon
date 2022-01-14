@@ -6,8 +6,8 @@ import java.util.*;
 public class BJ_G2_1525_퍼즐 {
 
 	static int answer = -1;
-	static int data[][] = new int[3][3];
-	static int deltas[][] = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
+	static int[][] data = new int[3][3];
+	static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 	static HashMap<Integer, Integer> map = new HashMap<>();
 	static StringTokenizer st;
 
@@ -55,7 +55,7 @@ public class BJ_G2_1525_퍼즐 {
 			count++;
 			for (int step = 0; step < size; step++) {
 				int[][] temp = queue.poll();
-				int zero[] = new int[2];
+				int[] zero = new int[2];
 				for (int j = 0; j < 3; j++) {
 					for (int k = 0; k < 3; k++) {
 						if (temp[j][k] == 9) {

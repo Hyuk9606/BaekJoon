@@ -5,7 +5,7 @@ import java.util.*;
 
 public class BJ_G3_1958_LCS3 {
 	static int ans = 0;
-	static int lcs[][][];
+	static int[][][] lcs;
 	static char[][] str = new char[3][];
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -8,17 +8,11 @@ public class SWEA_D4_1218 {
 	static char[] input;
 
 	static boolean isLeft(char c) {
-		if (c == '(' || c == '[' || c == '{' || c == '<')
-			return true;
-		else
-			return false;
+        return c == '(' || c == '[' || c == '{' || c == '<';
 	}
 
 	static boolean isRight(char c) {
-		if (c == ')' || c == ']' || c == '}' || c == '>')
-			return true;
-		else
-			return false;
+        return c == ')' || c == ']' || c == '}' || c == '>';
 	}
 
 	static boolean isValid(char c1, char c2) {

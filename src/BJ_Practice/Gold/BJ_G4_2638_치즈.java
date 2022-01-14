@@ -8,7 +8,7 @@ public class BJ_G4_2638_치즈 {
 	static int N, M;
 	static int[][] map;
 	static boolean[][] visited;
-	static int deltas[][] = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
+	static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 	static StringTokenizer st;
 
 	static class RC {

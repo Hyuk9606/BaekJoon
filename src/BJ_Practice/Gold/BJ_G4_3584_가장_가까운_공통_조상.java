@@ -6,7 +6,7 @@ import java.util.*;
 public class BJ_G4_3584_가장_가까운_공통_조상 {
 
 	static int T, N;
-	static int parent[];
+	static int[] parent;
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws IOException {

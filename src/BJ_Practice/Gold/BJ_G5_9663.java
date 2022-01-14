@@ -5,7 +5,7 @@ import java.util.*;
 
 public class BJ_G5_9663 {
 	static int N, cnt;
-	static int col[];
+	static int[] col;
 
 	static void setQueen(int rowNo) {
 //		if(!isAvailable(rowNo-1)) return;

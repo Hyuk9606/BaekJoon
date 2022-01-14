@@ -25,9 +25,8 @@ public class BJ_G5_12919_A와_B2 {
 
 	static boolean solve(String str) {
 		if(str.length() == Slen) {
-			if(str.equals(S)) return true;
-			return false;
-		}
+            return str.equals(S);
+        }
 		
 		if(str.charAt(str.length()-1) == 'A') {
 			if(solve(str.substring(0, str.length()-1))) {
@@ -38,9 +37,7 @@ public class BJ_G5_12919_A와_B2 {
 		if(str.charAt(0) == 'B') {
 			StringBuilder reverse = new StringBuilder();
 			reverse.append(str.substring(1,str.length()));
-			if(solve(reverse.reverse().toString())) {
-				return true;
-			}
+            return solve(reverse.reverse().toString());
 		}
 		return false;
 	}

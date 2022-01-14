@@ -5,7 +5,7 @@ import java.util.*;
 public class BJ_10825 {
 	private static Scanner scanner = new Scanner(System.in);
 
-	private static StringBuilder builder = new StringBuilder();
+	private static final StringBuilder builder = new StringBuilder();
 
 	private static int N;
 	private static Student[] students;
@@ -60,7 +60,7 @@ public class BJ_10825 {
 		}
 	}
 
-	private static String src = "12\r\n" + "Junkyu 50 60 100\r\n" + "Sangkeun 80 60 50\r\n" + "Sunyoung 80 70 100\r\n"
+	private static final String src = "12\r\n" + "Junkyu 50 60 100\r\n" + "Sangkeun 80 60 50\r\n" + "Sunyoung 80 70 100\r\n"
 			+ "Soong 50 60 90\r\n" + "Haebin 50 60 100\r\n" + "Kangsoo 60 80 100\r\n" + "Donghyuk 80 60 100\r\n"
 			+ "Sei 70 70 70\r\n" + "Wonseob 70 70 90\r\n" + "Sanghyun 70 70 80\r\n" + "nsj 80 80 80\r\n"
 			+ "Taewhan 50 60 90";

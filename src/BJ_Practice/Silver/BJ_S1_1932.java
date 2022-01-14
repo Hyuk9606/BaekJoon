@@ -13,7 +13,7 @@ public class BJ_S1_1932 {
 		StringBuilder sb = new StringBuilder();
 
 		N = Integer.parseInt(br.readLine());
-		int dp[][] = new int[N + 1][2];
+		int[][] dp = new int[N + 1][2];
 
 		for (int i = 1; i <= N; i++) {
 			st = new StringTokenizer(br.readLine());

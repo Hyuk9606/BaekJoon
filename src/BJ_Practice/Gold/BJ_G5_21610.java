@@ -5,8 +5,8 @@ import java.util.*;
 
 public class BJ_G5_21610 {
 	static int N, M;
-	static int map[][];
-	static int deltas[][] = {{0,-1},{-1,-1},{-1,0},{-1,1},{0,1},{1,1},{1,0},{1,-1}};
+	static int[][] map;
+	static int[][] deltas = {{0,-1},{-1,-1},{-1,0},{-1,1},{0,1},{1,1},{1,0},{1,-1}};
 	static StringTokenizer st;
 
 	static List<RC> clouds = new ArrayList<>();

@@ -5,8 +5,8 @@ import java.util.*;
 
 public class JG_1169_주사위던지기1 {
 	static int N, M;
-	static int numbers[];
-	static boolean selected[] = new boolean[7];
+	static int[] numbers;
+	static boolean[] selected = new boolean[7];
 
 	static StringTokenizer st;
 

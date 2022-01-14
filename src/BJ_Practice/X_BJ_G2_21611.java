@@ -6,7 +6,7 @@ import java.util.*;
 public class X_BJ_G2_21611 {
 	static int N, M;
 	static int countZero = 0;
-	static int bomb[] = new int[4];
+	static int[] bomb = new int[4];
 	static int[][] map;
 	static int[][] deltas = { { 0, 1 }, { 1, 0 }, { 0, -1 }, { -1, 0 } };
 	static int[][] deltas2 = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
@@ -35,9 +35,7 @@ public class X_BJ_G2_21611 {
 			Biz other = (Biz) obj;
 			if (c != other.c)
 				return false;
-			if (r != other.r)
-				return false;
-			return true;
+			return r == other.r;
 		}
 
 	}

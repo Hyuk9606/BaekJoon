@@ -62,7 +62,7 @@ public class SWEA_SW_4013_특이한자석 {
 				int num = Integer.parseInt(st.nextToken()) - 1;
 				int direction = Integer.parseInt(st.nextToken());
 
-				boolean check[] = new boolean[4];
+				boolean[] check = new boolean[4];
 				for (int j = num; j < 3; j++) {
 					if (gears[j].getMagneticRight() != gears[j + 1].getMagneticLeft()) {
 //						check[j] = true;

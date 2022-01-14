@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 public class BJ_S3_2606_바이러스 {
 	static int N,M;
-	static Node adjList[]; 
+	static Node[] adjList;
 	static StringTokenizer st;
 	
 	
@@ -33,7 +33,7 @@ public class BJ_S3_2606_바이러스 {
 		N = Integer.parseInt(br.readLine());
 		M = Integer.parseInt(br.readLine());
 		adjList = new Node[N+1];
-		boolean visited[] = new boolean[N+1];
+		boolean[] visited = new boolean[N+1];
 		for (int i = 0; i < M ; i++) {
 			st = new StringTokenizer(br.readLine());
 			int start = Integer.parseInt(st.nextToken());
