@@ -1,4 +1,4 @@
-package BJ_Practice;
+package BJ_Practice.Gold;
 
 
 import java.io.*;
@@ -44,8 +44,8 @@ public class BJ_G4_3151_합이_0 {
                     }
 
                     answer += s * e;
-                    start++;
-                } else if (current > 0)
+                }
+                if (current > 0)
                     end--;
                 else start++;
             }
@@ -56,6 +56,4 @@ public class BJ_G4_3151_합이_0 {
     static int comb(int n) {
         return n * (n - 1) / 2;
     }
-
-
 }
