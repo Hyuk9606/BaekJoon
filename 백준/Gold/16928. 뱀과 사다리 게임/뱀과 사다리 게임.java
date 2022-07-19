@@ -1,4 +1,6 @@
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
@@ -44,6 +46,7 @@ public class Main {
             Player temp = pq.poll();
             if(temp.num == 100){
                 answer = Math.min(answer, temp.count);
+                return;
             }
             
             for(int i=6; i>0; i--){
@@ -70,6 +73,14 @@ public class Main {
         public Player(int num, int count) {
             this.num = num;
             this.count = count;
+        }
+    
+        @Override
+        public String toString() {
+            return "Player{" +
+                    "num=" + num +
+                    ", count=" + count +
+                    '}';
         }
     }
 }
